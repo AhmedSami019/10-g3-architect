@@ -1,7 +1,133 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 .work-sans-font {
     font-family: "Work Sans", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-  }
+}
+/* *{
+    margin: 0;
+} */
+
+/* share styles */
+.orange-10{
+    background-color: rgba(255, 144, 14, .1);
+}
+.display-flex {
+    display: flex;
+}
+    /* color for text */
+.text-dark-2{
+    color: #424242;
+}
+.btn-primary{
+    background-color: #FF900E;
+    color: #fff;
+    padding: 20px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+main{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+main > section{
+    margin-top: 100px;
+}
+
+/* header section styles */
+
+/* navbar section styles */
+.navbar{
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar, .banner{
+    max-width: 1300px;
+    margin: 0 auto ;
+}
+.brand-name{
+    font-weight: bold;
+    font-size: 2.3rem;
+}
+.nav-item{
+    list-style: none;
+    margin-right: 30px;
+}
+.nav-link{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* banner section style */
+.banner-content{
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.banner-title{
+    font-weight: 700;
+    font-size: 4rem;
+}
+.banner img{
+    width: 100%;
+}
+/* features section styles */
+.features{
+    align-items: center;
+}
+.features-igm{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.features-text{
+    margin-left: 100px;
+    max-width: 80%;
+}
+.features-title{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+#quick-list{
+    font-weight: 500;
+}
+#text-highlight{
+    color: #FF900E;
+}
+
+/* media query responsive section */
+
+    /* small device */
+
+@media screen and (max-width: 576px) {
+    .navbar, 
+    .nav-link,
+    .features
+    {
+        flex-direction: column;
+    }
+    .features-igm{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .features-text{
+        margin:10px auto;
+    }
+}
+
+        /* medium device */
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .features{
+        flex-direction: column;
+
+    }
+    .features-text{
+        margin: 5px auto;
+    }
+}
